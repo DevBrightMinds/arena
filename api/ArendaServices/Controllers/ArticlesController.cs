@@ -21,12 +21,12 @@ namespace ArendaServices.Controllers
 
             try
             {
-
-                return new ErrorReporting() { Error = false, ErrorDetail = null, Results = arenaDBEntities.Articles.ToList() };
+                List<Article> articles = arenaDBEntities.Articles.ToList();
+                return new ErrorReporting() { Error = false, ErrorDetail = null, Results = articles };
             } 
             catch(Exception e)
             {
-                return new ErrorReporting() { Error = true, ErrorDetail = e.Message + " Should the problem persist, please contact support.", Results = null };
+                return new ErrorReporting() { Error = true, ErrorDetail = e.Message + ", Should the problem persist, please contact support.", Results = null };
             }
         }
     }
