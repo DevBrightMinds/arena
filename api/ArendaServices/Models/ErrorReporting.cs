@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace ArendaServices.Models
+﻿namespace ArendaServices.Models
 {
     public class ErrorReporting
     {

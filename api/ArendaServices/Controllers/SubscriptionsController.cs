@@ -2,10 +2,12 @@
 using System.Web.Mvc;
 using System.Web.Http;
 using ArenaDataAccess;
+using System.Web.Http.Cors;
 using ArendaServices.Models;
 
 namespace ArendaServices.Controllers
 {
+        [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class SubscriptionsController : ApiController
     {
         // Intial DB connection 

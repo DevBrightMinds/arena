@@ -248,3 +248,6 @@ C:\Users\Treasure\Documents\DevWork\WinApps\api\ArendaServices\obj\Debug\ArendaS
 C:\Users\Treasure\Documents\DevWork\WinApps\api\ArendaServices\obj\Debug\ArendaServices.csproj.CopyComplete
 C:\Users\Treasure\Documents\DevWork\WinApps\api\ArendaServices\obj\Debug\ArendaServices.dll
 C:\Users\Treasure\Documents\DevWork\WinApps\api\ArendaServices\obj\Debug\ArendaServices.pdb
+C:\Users\Treasure\Documents\DevWork\WinApps\api\ArendaServices\bin\System.Web.Cors.dll
+C:\Users\Treasure\Documents\DevWork\WinApps\api\ArendaServices\bin\System.Web.Http.Cors.dll
+C:\Users\Treasure\Documents\DevWork\WinApps\api\ArendaServices\bin\System.Web.Http.Cors.xml
