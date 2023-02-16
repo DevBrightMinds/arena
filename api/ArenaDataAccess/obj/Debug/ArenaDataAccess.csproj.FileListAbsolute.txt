@@ -1,0 +1,12 @@
+C:\Users\Treasure\Documents\DevWork\WinApps\api\ArenaDataAccess\bin\Debug\ArenaDataAccess.dll.config
+C:\Users\Treasure\Documents\DevWork\WinApps\api\ArenaDataAccess\bin\Debug\ArenaDataAccess.dll
+C:\Users\Treasure\Documents\DevWork\WinApps\api\ArenaDataAccess\bin\Debug\ArenaDataAccess.pdb
+C:\Users\Treasure\Documents\DevWork\WinApps\api\ArenaDataAccess\bin\Debug\EntityFramework.dll
+C:\Users\Treasure\Documents\DevWork\WinApps\api\ArenaDataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Treasure\Documents\DevWork\WinApps\api\ArenaDataAccess\bin\Debug\EntityFramework.xml
+C:\Users\Treasure\Documents\DevWork\WinApps\api\ArenaDataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Treasure\Documents\DevWork\WinApps\api\ArenaDataAccess\obj\Debug\ArenaDataAccess.csproj.AssemblyReference.cache
+C:\Users\Treasure\Documents\DevWork\WinApps\api\ArenaDataAccess\obj\Debug\ArenaDataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Treasure\Documents\DevWork\WinApps\api\ArenaDataAccess\obj\Debug\ArenaDataAccess.csproj.CopyComplete
+C:\Users\Treasure\Documents\DevWork\WinApps\api\ArenaDataAccess\obj\Debug\ArenaDataAccess.dll
+C:\Users\Treasure\Documents\DevWork\WinApps\api\ArenaDataAccess\obj\Debug\ArenaDataAccess.pdb
