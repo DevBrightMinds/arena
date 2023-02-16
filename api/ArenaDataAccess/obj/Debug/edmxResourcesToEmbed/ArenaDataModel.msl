@@ -7,20 +7,20 @@
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Author" ColumnName="Author" />
           <ScalarProperty Name="ArticleName" ColumnName="ArticleName" />
-          <ScalarProperty Name="IsPublished" ColumnName="IsPublished" />
           <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
           <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Subscriptions">
-      <EntityTypeMapping TypeName="ArenaDBModel.Subscription">
-        <MappingFragment StoreEntitySet="Subscription">
+    <EntitySetMapping Name="Contacts">
+      <EntityTypeMapping TypeName="ArenaDBModel.Contact">
+        <MappingFragment StoreEntitySet="Contact">
           <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Names" ColumnName="Names" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Phone" ColumnName="Phone" />
-          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

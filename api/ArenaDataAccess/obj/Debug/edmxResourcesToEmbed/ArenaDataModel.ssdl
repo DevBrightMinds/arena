@@ -7,22 +7,22 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Author" Type="nvarchar" MaxLength="250" />
     <Property Name="ArticleName" Type="nvarchar" MaxLength="250" />
-    <Property Name="IsPublished" Type="int" />
     <Property Name="DateCreated" Type="nvarchar" MaxLength="250" />
     <Property Name="ImageUrl" Type="nvarchar" MaxLength="250" />
+    <Property Name="Content" Type="text" />
   </EntityType>
-  <EntityType Name="Subscription">
+  <EntityType Name="Contact">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="Names" Type="nvarchar" MaxLength="250" />
     <Property Name="Email" Type="nvarchar" MaxLength="250" />
-    <Property Name="Phone" Type="int" />
-    <Property Name="Message" Type="nvarchar" MaxLength="250" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="250" />
+    <Property Name="Content" Type="nvarchar" MaxLength="250" />
   </EntityType>
   <EntityContainer Name="ArenaDBModelStoreContainer">
     <EntitySet Name="Articles" EntityType="Self.Articles" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Subscription" EntityType="Self.Subscription" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

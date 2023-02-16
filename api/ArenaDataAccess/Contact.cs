@@ -12,13 +12,12 @@ namespace ArenaDataAccess
     using System;
     using System.Collections.Generic;
     
-    public partial class Article
+    public partial class Contact
     {
         public int ID { get; set; }
-        public string Author { get; set; }
-        public string ArticleName { get; set; }
-        public string DateCreated { get; set; }
-        public string ImageUrl { get; set; }
+        public string Names { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
         public string Content { get; set; }
     }
 }

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B4149FB5-C5A9-4251-8A7D-D94A7AB62482}</ProjectGuid>
+    <ProjectGuid>{7BD743A6-5856-4374-A459-A8EE206BEE55}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ArenaDataAccess</RootNamespace>
@@ -68,10 +68,10 @@
     <Compile Include="Article.cs">
       <DependentUpon>ArenaDataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Subscription.cs">
+    <Compile Include="Contact.cs">
       <DependentUpon>ArenaDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="ArenaDataModel.edmx">

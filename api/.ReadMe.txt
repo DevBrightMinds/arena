@@ -3,6 +3,7 @@
 2. It also allowers users to subscribe to newsletters from these publishing companies.
 
 # Getting Started
+TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
 1. While code first is a very excellent approach, I did not go with it considering there wasn't a lot of work to do - in creating a DB and its tables.
 2. To kick start this project, please look into the project directory for a file naned 'SQLQuery1.sql'. Once located, you can either double click the file
    , which will in turn open the SQL Server Management studio, or either please open your SQL Server Management and open the file named above and copy the logic

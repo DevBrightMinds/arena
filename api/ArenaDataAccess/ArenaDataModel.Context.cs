@@ -26,6 +26,6 @@ namespace ArenaDataAccess
         }
     
         public virtual DbSet<Article> Articles { get; set; }
-        public virtual DbSet<Subscription> Subscriptions { get; set; }
+        public virtual DbSet<Contact> Contacts { get; set; }
     }
 }

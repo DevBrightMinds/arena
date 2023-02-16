@@ -12,23 +12,23 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Author" Type="nvarchar" MaxLength="250" />
           <Property Name="ArticleName" Type="nvarchar" MaxLength="250" />
-          <Property Name="IsPublished" Type="int" />
           <Property Name="DateCreated" Type="nvarchar" MaxLength="250" />
           <Property Name="ImageUrl" Type="nvarchar" MaxLength="250" />
+          <Property Name="Content" Type="text" />
         </EntityType>
-        <EntityType Name="Subscription">
+        <EntityType Name="Contact">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Names" Type="nvarchar" MaxLength="250" />
           <Property Name="Email" Type="nvarchar" MaxLength="250" />
-          <Property Name="Phone" Type="int" />
-          <Property Name="Message" Type="nvarchar" MaxLength="250" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="250" />
+          <Property Name="Content" Type="nvarchar" MaxLength="250" />
         </EntityType>
         <EntityContainer Name="ArenaDBModelStoreContainer">
           <EntitySet Name="Articles" EntityType="Self.Articles" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Subscription" EntityType="Self.Subscription" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -42,23 +42,23 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Author" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="ArticleName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="IsPublished" Type="Int32" />
           <Property Name="DateCreated" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="ImageUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="Subscription">
+        <EntityType Name="Contact">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Names" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="Phone" Type="Int32" />
-          <Property Name="Message" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="ArenaDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Articles" EntityType="Self.Article" />
-          <EntitySet Name="Subscriptions" EntityType="Self.Subscription" />
+          <EntitySet Name="Contacts" EntityType="Self.Contact" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -72,20 +72,20 @@
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Author" ColumnName="Author" />
                 <ScalarProperty Name="ArticleName" ColumnName="ArticleName" />
-                <ScalarProperty Name="IsPublished" ColumnName="IsPublished" />
                 <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
                 <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Subscriptions">
-            <EntityTypeMapping TypeName="ArenaDBModel.Subscription">
-              <MappingFragment StoreEntitySet="Subscription">
+          <EntitySetMapping Name="Contacts">
+            <EntityTypeMapping TypeName="ArenaDBModel.Contact">
+              <MappingFragment StoreEntitySet="Contact">
                 <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Names" ColumnName="Names" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
-                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

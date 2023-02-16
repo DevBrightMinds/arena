@@ -6,17 +6,15 @@ using System.Web;
 
 namespace ArendaServices.Models
 {
-    public class Articles
+    public class Contacts
     {
         public int ID { get; set; }
         [Required]
-        public string Author { get; set; }
+        public string Name { get; set; }
         [Required]
-        public string ArticleName { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
         [Required]
-        public string DateCreated { get; set; }
-        [Required]
-        public string ImageUrl { get; set; }
-        public string Content { get; set; }
+        public string Message { get; set; }
     }
 }

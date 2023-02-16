@@ -221,14 +221,14 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\ArticlesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\SubscriptionsController.cs" />
+    <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Articles.cs" />
     <Compile Include="Models\ErrorReporting.cs" />
-    <Compile Include="Models\Subscriptions.cs" />
+    <Compile Include="Models\Contacts.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -318,7 +318,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ArenaDataAccess\ArenaDataAccess.csproj">
-      <Project>{b4149fb5-c5a9-4251-8a7d-d94a7ab62482}</Project>
+      <Project>{7bd743a6-5856-4374-a459-a8ee206bee55}</Project>
       <Name>ArenaDataAccess</Name>
     </ProjectReference>
   </ItemGroup>
