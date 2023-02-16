@@ -22,16 +22,17 @@ const ArticleContentScreen: React.FC<{}> = (): JSX.Element => {
         <div className="main-container" style={{ width: "80%", margin: "0 auto", padding: "2% 0 0 0" }}>
             <div className="article-content">
                 <div className="article-header" style={{ display: "flex", justifyContent: "space-between", width: "40%" }}>
-                    <div className="header-left">
-                        <img src={Article.ImageUrl} style={{ width: "70%" }} alt="article image" />
+                    <div className="header-left" style={{ width: "70%" }}>
+                        <img src={Article.ImageUrl} style={{ width: "90%" }} alt="article image" />
                     </div>
-                    <div className="header-right">
+                    <div className="header-right" style={{ width: "30%" }}>
                         <h4 className="container-heading">{Article.ArticleName}</h4>
-                        <p>{Article.DateCreated}</p>
+                        <p style={{ margin: 0 }}>{Article.Author} </p>
+                        <p style={{ margin: 0, color: "red" }}>{Article.DateCreated}</p>
                     </div>
                 </div>
-                <div className="article-body">
-
+                <div className="article-body" style={{ width: "40%", padding: "10px 0 0 0" }}>
+                    <pre>{Article.Content}</pre>
                 </div>
                 <button style={{ margin: "10px 0 10px 0" }} onClick={closeArticle} className="btn btn-danger">Close</button>
             </div>

@@ -1,6 +1,6 @@
 export default interface Subscription {
-    Name: string
+    Names: string
     Phone: string
     Email: string
-    Message: string
+    Content: string
 }

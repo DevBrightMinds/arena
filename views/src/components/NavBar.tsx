@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 import $ from "jquery";
 
 const NavBar: React.FC<{}> = (): JSX.Element => {
-
+    const toggleMenu = () => {
+        $(".app-nav").slideToggle(500);
+    }
     return <>
         <header style={ModalStyle.header}>
-            <div className="nav-mobile">
+            <div className="nav-mobile" onClick={toggleMenu}>
                 <div className="bar" style={ModalStyle.mobileMenuBar}></div>
                 <div className="bar" style={ModalStyle.mobileMenuBar}></div>
                 <div className="bar" style={ModalStyle.mobileMenuBar}></div>

@@ -27,13 +27,15 @@ const ContactUsScreen: React.FC<{}> = (): JSX.Element => {
             handlePopUpLogic(true, "Error", "Please fill in all required fields.");
         } else if (!validateEmail(Email)) {
             handlePopUpLogic(true, "Error", "Please provide a valid email.");
+        } else if (Phone.length < 10) {
+            handlePopUpLogic(true, "Error", "Your phone number should be at least 10 chartacters long.");
         } else {
             const params: Contact = {} as Contact;
 
-            params.Name = Name;
+            params.Names = Name;
             params.Phone = Phone;
             params.Email = Email;
-            params.Message = Message;
+            params.Content = Message;
 
             handlePopUpLogic(true, "Processing", "Please wait . . .");
 
@@ -43,6 +45,10 @@ const ContactUsScreen: React.FC<{}> = (): JSX.Element => {
                         if (results.Error) {
                             handlePopUpLogic(true, "Error", results.ErrorDetail);
                         } else {
+                            setName("");
+                            setPhone("");
+                            setEmail("");
+                            setMessage("");
                             handlePopUpLogic(true, "Success", "Thank you.");
                         }
                     })
@@ -82,19 +88,19 @@ const ContactUsScreen: React.FC<{}> = (): JSX.Element => {
             <div className="contact-form">
                 <fieldset className="form-group">
                     <label>Your Names</label>
-                    <input type="text" placeholder="Your Names" onChange={(e) => setName(e.target.value)} id="Name" name="Name" className="form-control" />
+                    <input type="text" placeholder="Your Names" value={Name} onChange={(e) => setName(e.target.value)} id="Name" name="Name" className="form-control" />
                 </fieldset>
                 <fieldset className="form-group">
                     <label>Your Email Address</label>
-                    <input type="text" placeholder="Email Address" onChange={(e) => setEmail(e.target.value)} id="Email" name="Email" className="form-control" />
+                    <input type="text" placeholder="Email Address" value={Email} onChange={(e) => setEmail(e.target.value)} id="Email" name="Email" className="form-control" />
                 </fieldset>
                 <fieldset className="form-group">
                     <label>Your Cellphone Number</label>
-                    <input type="text" placeholder="Your Cellphone Number" onChange={(e) => setPhone(e.target.value)} id="Phone" name="Phone" className="form-control" />
+                    <input type="number" placeholder="Your Cellphone Number" value={Phone} onChange={(e) => setPhone(e.target.value)} id="Phone" name="Phone" className="form-control" />
                 </fieldset>
                 <fieldset className="form-group">
                     <label>Your Message</label>
-                    <textarea className="form-control" id="Message" name="Message" onChange={(e) => setMessage(e.target.value)} placeholder="Enter your message"></textarea>
+                    <textarea className="form-control" id="Message" value={Message} name="Message" onChange={(e) => setMessage(e.target.value)} placeholder="Enter your message"></textarea>
                 </fieldset>
                 <button className="btn btn-primary" onClick={submitForm}>Submit</button>
             </div>

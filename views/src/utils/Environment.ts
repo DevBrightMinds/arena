@@ -5,6 +5,6 @@ export const Environment = {
     // api endpoints
     EndPoints: {
         GetArticles: "articles",
-        SubscribeUser: "subscriptions"
+        SubscribeUser: "contacts"
     }
 }
