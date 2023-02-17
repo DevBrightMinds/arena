@@ -5,6 +5,7 @@ using ArenaDataAccess;
 using System.Web.Http.Cors;
 using ArendaServices.Models;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 
 namespace ArendaServices.Controllers
 {
@@ -17,21 +18,22 @@ namespace ArendaServices.Controllers
         // POST: Subscribe a user to mailing list
         public ErrorReporting AddUserDetails([FromBody] Contact contact)
         {
+            var existingEntry = GetExisitingEntry(contact.Email);
 
             try
             {
                
-                if (!string.IsNullOrEmpty(contact.Email) ||
-                    !string.IsNullOrEmpty(contact.Content) ||
-                    !string.IsNullOrEmpty(contact.Phone.ToString()) ||
-                    !string.IsNullOrEmpty(contact.Names))
+                if (string.IsNullOrEmpty(contact.Email) ||
+                    string.IsNullOrEmpty(contact.Content) ||
+                    string.IsNullOrEmpty(contact.Phone) ||
+                    string.IsNullOrEmpty(contact.Names))
                 {
                     return new ErrorReporting() { Error = true, ErrorDetail = "Please fill in all required fields.", Results = null };
                 }
                 else if (!IsValidEmail(contact.Email))
                 {
                     return new ErrorReporting() { Error = true, ErrorDetail = "Please provide a valid email address.", Results = null };
-                } else if()
+                } else if(existingEntry != null)
                 {
                     return new ErrorReporting() { Error = true, ErrorDetail = "The email address '" + contact.Email + "' already exists.", Results = null };
                 }
@@ -55,6 +57,13 @@ namespace ArendaServices.Controllers
         public bool IsValidEmail(string email)
         {
             return new EmailAddressAttribute().IsValid(email);
+        }
+
+        public Contact GetExisitingEntry(string email)
+        {
+            Contact contact = arenaDBEntities.Contacts.FirstOrDefault(item => item.Email == email);
+
+            return contact;
         }
     }
 }
