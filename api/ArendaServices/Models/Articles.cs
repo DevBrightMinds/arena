@@ -17,6 +17,7 @@ namespace ArendaServices.Models
         public string DateCreated { get; set; }
         [Required]
         public string ImageUrl { get; set; }
+        [Required]
         public string Content { get; set; }
     }
 }

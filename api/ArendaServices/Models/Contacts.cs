@@ -10,11 +10,12 @@ namespace ArendaServices.Models
     {
         public int ID { get; set; }
         [Required]
-        public string Name { get; set; }
+        public string Names { get; set; }
         [Required]
         public string Email { get; set; }
+        [Required]
         public string Phone { get; set; }
         [Required]
-        public string Message { get; set; }
+        public string Content { get; set; }
     }
 }
